@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class StarController : MonoBehaviour
 {
     // 移動速度のランダム変数用配列
-    public float[] speed = { -2.0f, -0.05f };
+    public float[] speed = { -5.0f, -0.05f };
 
     // 小星の移動速度
     public float[] speedSs;
@@ -25,14 +25,17 @@ public class StarController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        // 小星を移動させる
-        transform.Translate(speedSs[0], speedSs[1], speedSs[2]);
-
+    {        
         // feldを透過したらオブジェクト消滅
         if (transform.position.y < this.deadLine)
         {
-            Destroy(gameObject);
+            //１秒後にDestroy
+            Destroy(gameObject, 1.0f);
+        }
+        else
+        {
+            // 小星を移動させる
+            transform.Translate(speedSs[0], speedSs[1], speedSs[2]);
         }
     }
 

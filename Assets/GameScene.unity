@@ -344,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallStarPrefab: {fileID: 1000013929893118, guid: 6664e4214823ef4479ca27da9a84d5c9,
     type: 2}
-  genPosZ: 900
+  genPosY: 250
 --- !u!1 &1216933462
 GameObject:
   m_ObjectHideFlags: 0
