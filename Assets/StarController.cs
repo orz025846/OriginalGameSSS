@@ -27,9 +27,17 @@ public class StarController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        // feldを透過したらオブジェクト消滅
-        if (transform.position.y < this.deadLine)
+    {
+        // ◆クリック（タップ）したオブジェクトを取得・・・したい
+        if (Input.GetButtonDown(0))
+        {
+            // ◆（実装予定）ポイントの加算
+            GetComponent<ParticleSystem>().Play();  // ◆爆発エフェクト起動・・・仮でパーティクル
+            Destroy(gameObject, 0.1f);  // ◆一緒にデストロイ・・・したい
+        }
+
+            // feldを透過したらオブジェクト消滅
+            if (transform.position.y < this.deadLine)
         {
             //１秒後にDestroy
             Destroy(gameObject, 1.0f);
