@@ -21,7 +21,7 @@ public class UIController : MonoBehaviour
     private Button _button;
 
     // ゲーム終了の判定
-    private bool isEnd = false;
+    //private bool isEnd = false;
 
     // Use this for initialization
     void Start()

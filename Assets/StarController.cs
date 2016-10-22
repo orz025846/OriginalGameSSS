@@ -23,21 +23,37 @@ public class StarController : MonoBehaviour
             Random.Range (speed [0] * aaa, speed [1] * aaa),
             Random.Range (speed [0] * aaa, speed [1] * aaa)
         };
+
+        // RayCastのレイヤーマスク
+        int layerMask = LayerMask.GetMask(new string[] { "SmallStarLayer" });
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ◆クリック（タップ）したオブジェクトを取得・・・したい
-        if (Input.GetButtonDown(0))
+        
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        float maxDistance = 1920;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            // ◆（実装予定）ポイントの加算
-            GetComponent<ParticleSystem>().Play();  // ◆爆発エフェクト起動・・・仮でパーティクル
-            Destroy(gameObject, 0.1f);  // ◆一緒にデストロイ・・・したい
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                //Debug.Log(hit.collider.gameObject.name);
+                Destroy(gameObject, 0.1f);
+            }
+            Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.green, 5, false);
         }
 
-            // feldを透過したらオブジェクト消滅
-            if (transform.position.y < this.deadLine)
+            // ◆（実装予定）ポイントの加算
+            //GetComponent<ParticleSystem>().Play();  // ◆爆発エフェクト起動・・・仮でパーティクル
+            //Destroy(gameObject, 0.1f);  // ◆一緒にデストロイ・・・したい
+        
+
+        // feldを透過したらオブジェクト消滅
+        if (transform.position.y < this.deadLine)
         {
             //１秒後にDestroy
             Destroy(gameObject, 1.0f);
