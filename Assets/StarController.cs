@@ -24,7 +24,7 @@ public class StarController : MonoBehaviour
             Random.Range (speed [0] * aaa, speed [1] * aaa)
         };
 
-        // RayCastのレイヤーマスク
+        // RayCastのレイヤーマスク（未遂）
         int layerMask = LayerMask.GetMask(new string[] { "SmallStarLayer" });
 
     }
@@ -32,24 +32,22 @@ public class StarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        float maxDistance = 1920;
+        // Raycastの実装
+        //参考©http://kan-kikuchi.hatenablog.com/ ©http://unityrakku.blog.fc2.com/blog-entry-17.html
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))  // マウス左クリック
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);  //Ray発射
+            RaycastHit hit;  //Rayが当たったオブジェクト情報取得用
+            float maxDistance = 1920;  //Ray軌跡の長さ
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 //Debug.Log(hit.collider.gameObject.name);
-                Destroy(gameObject, 0.1f);
+                Destroy(hit.collider.gameObject, 0.1f);
             }
             Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.green, 5, false);
         }
-
-            // ◆（実装予定）ポイントの加算
-            //GetComponent<ParticleSystem>().Play();  // ◆爆発エフェクト起動・・・仮でパーティクル
-            //Destroy(gameObject, 0.1f);  // ◆一緒にデストロイ・・・したい
         
 
         // feldを透過したらオブジェクト消滅
