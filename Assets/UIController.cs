@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    private float startTime = 10.00f;  // 制限時間
+    private float startTime = 30.00f;  // 制限時間
     private float time; // 残り時間
     private float overTime = 0; // オーバータイムの設定
-    private float timeflat; // 経過時間（deltaTime）用変数
+    private float timeflat; // 経過時間（deltaTime）代入用変数
 
     [SerializeField]
     private GameObject timeWatchText;
@@ -20,8 +20,6 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Button _button;
 
-    // ゲーム終了の判定
-    //private bool isEnd = false;
 
     // Use this for initialization
     void Start()
@@ -30,9 +28,9 @@ public class UIController : MonoBehaviour
         this.timeflat = 0;
         //ボタンを押した時の処理
         _button.onClick.AddListener(() => {
-                SceneManager.LoadScene("Start");
+            SceneManager.LoadScene("Start");
         });
-        
+
     }
 
     // Update is called once per frame
@@ -43,6 +41,7 @@ public class UIController : MonoBehaviour
         {
             this.timeWatchText.GetComponent<Text>().text = 0.ToString("F2");  //0.00表示
             this.timeUPText.GetComponent<Text>().text = "TimeUP";  //TimeUPTextUI呼び出し
+            StartCoroutine(SegueGameOverScene());
         }
         else
         {
@@ -51,5 +50,11 @@ public class UIController : MonoBehaviour
             this.time = startTime - timeflat;  //残り時間
             this.timeWatchText.GetComponent<Text>().text = time.ToString("F2");  //残り時間表示
         }
+    }
+
+    private IEnumerator SegueGameOverScene()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("GameOver");
     }
 }

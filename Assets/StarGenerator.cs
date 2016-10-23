@@ -10,7 +10,7 @@ public class StarGenerator : MonoBehaviour
     /// smallStarの生成位置
     /// </summary>
     [SerializeField]
-    private float genPosY = 900;
+    private float genPosY = 500;
 
     /// <summary>
     /// smallStarの生成個数の上限
