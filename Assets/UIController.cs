@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    private float startTime = 15.00f;  // 制限時間
+    private float startTime = 30.00f;  // 制限時間
     private float time; // 残り時間
     private float overTime = 0; // オーバータイムの設定
     private float timeflat; // 経過時間（deltaTime）代入用変数
