@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
 public class StarController : MonoBehaviour
 {
-    // 移動速度のランダム変数用配列
-    public float[] speed = { -50.0f, -50.0f };
-
-    // 小星の移動速度
-    public float[] speedSs;
-
-    // オブジェクトの消滅位置
-    public float deadLine = -175;
-
+    // 生成オブジェクトのアタッチ
     [SerializeField]
     private GameObject smallStarPrefab;
+    [SerializeField]
+    private GameObject pumpkin_02Prefab;
 
-    // ポイント加算用UI
-    //[SerializeField]
-    //private Image image;
+    // オブジェクトの移動速度
+    public float[] speed = { -50.0f, -50.0f };  //ランダム変数
+    public float[] speedSs;  //移動速度用
+
+    // オブジェクトの消滅位置（y座標に設定）
+    public float deadLine = -175;
+
+    // ポイント加算用UIのアタッチ
+    [SerializeField]
+    public Image image;
 
     // Use this for initialization
     void Start()
@@ -33,9 +34,6 @@ public class StarController : MonoBehaviour
             Random.Range (speed [0] * bbb, speed [1] * bbb)
         };
 
-        // プログレスバーImageオブジェクト取得
-        //image = GetComponent<Image>();
-
     }
 
     // Update is called once per frame
@@ -43,36 +41,42 @@ public class StarController : MonoBehaviour
     {
         // Raycastの実装
         if (Input.GetMouseButtonDown(0))  // マウス左クリック
-        {           
+        {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);  //Ray発射
             RaycastHit hit;  //Rayが当たったオブジェクト情報取得用
             float maxDistance = 2000;  //Ray軌跡の長さ
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
+                image.fillAmount += 0.3f;
                 Destroy(hit.collider.gameObject, 0.1f);
                 
             }
 
-            
+            if (image.fillAmount >= 1)  //バーが満杯
+            {
+                image.fillAmount = 0;  //仮に0に戻る→CLEAR表示、Animetion画面に遷移
+            }
+
+
             Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.green, 5, false);
         }
 
 
-        // feldを透過したらオブジェクト消滅
+        // field（ｙ座標）を透過したらオブジェクト消滅
         if (transform.position.y < this.deadLine)
         {
             //１秒後にDestroy
             Destroy(gameObject, 1.0f);
         }
-        // 小星を移動させる
+        // オブジェクトを移動させる
         transform.Translate(speedSs[0], speedSs[1], speedSs[2]);
     }
 
     void OnTriggerEnter(Collider other)
     {
         //Field以外に衝突した場合
-        if (other.gameObject.tag == "SmallStarTag")
+        if (other.gameObject.tag == "SmallStarTag" || other.gameObject.tag == "pumpkin_02Prefab")
         {
             return;
         }

@@ -4,18 +4,22 @@ using System.Collections.Generic;
 
 public class StarGenerator : MonoBehaviour
 {
-    // smallStarのPrefab
+    // 生成オブジェクトのPrefab
     public GameObject smallStarPrefab;
+    public GameObject Pumpkin_02Prefab;
     /// <summary>
     /// smallStarの生成位置
     /// </summary>
     [SerializeField]
-    private float genPosY = 500;
+    private float gensSPosY = 500;
+    [SerializeField]
+    private float genPkPosY = 200;
 
     /// <summary>
     /// smallStarの生成個数の上限
     /// </summary>
     private int maxsSNum = 8;
+    private int maxPkNum = 1;
     /// <summary>
     /// Terrainの位置を格納する変数 
     /// </summary>
@@ -32,30 +36,28 @@ public class StarGenerator : MonoBehaviour
     /// </summary>
     private float terrainLength = 1500.0f;
     /// <summary>
-    ///何秒に１度Starを出現させるか 
+    ///何秒に１度オブジェクトを出現させるか 
     /// </summary>
     private float timeInterval = 2.0f;
+    private float timeInterval_Pk = 5.0f;
     /// <summary>
     /// 秒数をカウントするカウンター 
     /// </summary>
     private float timeCounter = 0;
+    private float timeCounterPk = 0;
 
     // Use this for initialization
     void Start()
     {
 
-        //追記ぶん(Fieldオブジェクトの取り込み）
+        //Fieldオブジェクトの取り込み
         GameObject field = GameObject.Find("Field") as GameObject;
+        //Fieldの端の位置を計算
         fieldPosition = field.transform.position;
-        //端の位置を計算
-        //左下のX座標
-        minPosX = fieldPosition.x;
-        //右上のX座標
-        maxPosX = fieldPosition.x + terrainLength;
-        //左下のZ座標
-        minPosZ = fieldPosition.z;
-        //右上のZ座標
-        maxPosZ = fieldPosition.z + terrainLength;
+        minPosX = fieldPosition.x;  //左下のx座標
+        maxPosX = fieldPosition.x + terrainLength;  //右上のx座標
+        minPosZ = fieldPosition.z;  // 左下のz座標
+        maxPosZ = fieldPosition.z + terrainLength;  //右上のz座標
     }
 
     // Update is called once per frame
@@ -68,7 +70,8 @@ public class StarGenerator : MonoBehaviour
         {
             //秒数カウンターを0で初期化
             timeCounter = 0;
-            // 生成するPrefab数をランダムに決める
+
+            // 生成するsmallStarPrefab数をランダムに決める
             int n = Random.Range(1, maxsSNum + 1);
             // 生成
             for (int i = 0; i < n; i++)
@@ -79,7 +82,30 @@ public class StarGenerator : MonoBehaviour
                 smallStar.transform.position =
                     new Vector3(
                     Random.Range(minPosX, maxPosX),
-                    genPosY,
+                    gensSPosY,
+                    Random.Range(minPosZ, maxPosZ)
+                );
+            }
+        }
+
+
+        timeCounterPk += Time.deltaTime * 2;
+        if (timeCounterPk > timeInterval_Pk)
+        {
+            timeCounterPk = 0;
+            
+            // 生成するPumpkin_02Prefab数をランダムに決める
+            int p = Random.Range(1, maxPkNum + 1);
+            // 生成
+            for (int m = 0; m < p; m++)
+            {
+                //Pumpkin_02Prefabの生成
+                GameObject Pumpkin_02 = Instantiate(Pumpkin_02Prefab) as GameObject;
+                //位置を指定
+                Pumpkin_02.transform.position =
+                    new Vector3(
+                    Random.Range(minPosX, maxPosX),
+                    genPkPosY,
                     Random.Range(minPosZ, maxPosZ)
                 );
             }

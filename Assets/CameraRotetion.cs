@@ -16,8 +16,8 @@ public class CameraRotetion : MonoBehaviour
     void Start()
     {
 
-        Debug.Log(this.gameObject.transform.position);
-        Debug.Log(Camera.main.transform.position);
+        //Debug.Log(this.gameObject.transform.position);
+        //Debug.Log(Camera.main.transform.position);
 
     }
 
