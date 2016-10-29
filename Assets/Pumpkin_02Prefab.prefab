@@ -125,7 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e9bb23f952c5e48938b3aa1b582824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallStarPrefab: {fileID: 0}
 --- !u!114 &114000013657862240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e9bb23f952c5e48938b3aa1b582824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallStarPrefab: {fileID: 0}
 --- !u!135 &135000013343484610
 SphereCollider:
   m_ObjectHideFlags: 1
