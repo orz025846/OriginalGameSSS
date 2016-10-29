@@ -577,7 +577,7 @@ MonoBehaviour:
   Pumpkin_02Prefab: {fileID: 1000010419465352, guid: 6063790a4802f0d49a3f194222ccc313,
     type: 2}
   gensSPosY: 500
-  genPkPosY: 900
+  genPkPosY: 200
 --- !u!114 &1190319106
 MonoBehaviour:
   m_ObjectHideFlags: 0

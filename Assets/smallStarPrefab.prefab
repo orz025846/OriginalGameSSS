@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000014096295556}
   - 54: {fileID: 54000011342257326}
   - 199: {fileID: 199000012631324088}
+  - 114: {fileID: 114000011288406228}
   - 198: {fileID: 198000010082274912}
   m_Layer: 8
   m_Name: smallStarPrefab
@@ -96,6 +97,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011288406228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013929893118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900ba272f2c72114aa2945ab2476691d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135000012323806472
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -153,7 +165,7 @@ ParticleSystem:
     minMaxState: 0
   speed: 1
   randomSeed: 1111302376
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   moveWithTransform: 0

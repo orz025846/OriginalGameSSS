@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class PumpkinController : MonoBehaviour {
+    //public GameObject smallStarPrefab;
 
 	// Use this for initialization
 	void Start () {
-        //回転を開始する角度を設定
+
+        // pumpkin_02の回転を開始する角度を設定
         this.transform.Rotate(0, 0, 0);
 
+        
     }
 	
 	// Update is called once per frame
@@ -17,4 +20,5 @@ public class PumpkinController : MonoBehaviour {
         this.transform.Rotate(0, 0, 1);
 
     }
+
 }
