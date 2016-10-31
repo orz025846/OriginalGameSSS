@@ -293,7 +293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 15.00
+  m_Text: 
 --- !u!222 &459776439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.483
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!222 &733676670
@@ -589,16 +589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd43658933fcbb049a94bc7cf9629d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallStarPrefab: {fileID: 1000013929893118, guid: 6664e4214823ef4479ca27da9a84d5c9,
-    type: 2}
-  pumpkin_02Prefab: {fileID: 1000010419465352, guid: 6063790a4802f0d49a3f194222ccc313,
-    type: 2}
-  speed:
-  - -50
-  - -50
-  speedSs: []
-  deadLine: -175
   image: {fileID: 733676669}
+  clearText: {fileID: 0}
 --- !u!1 &1216933462
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6f0b6e5abbb7a4d83f1231835611df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDounText: {fileID: 0}
   timeWatchText: {fileID: 459776436}
   timeUPText: {fileID: 390776525}
   _button: {fileID: 1450328691}

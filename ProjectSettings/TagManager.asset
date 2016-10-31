@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SmallStarTag
   - PumpkinTag
+  - PumpkinBombTag
   layers:
   - Default
   - TransparentFX

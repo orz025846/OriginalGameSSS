@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class StarGenerator : MonoBehaviour
+public class ObjGenerator : MonoBehaviour
 {
     // 生成オブジェクトのPrefab
     public GameObject smallStarPrefab;
@@ -13,7 +13,7 @@ public class StarGenerator : MonoBehaviour
     [SerializeField]
     private float gensSPosY = 500;
     [SerializeField]
-    private float genPkPosY = 200;
+    private float genPkPosY = 900;
 
     /// <summary>
     /// smallStarの生成個数の上限
@@ -46,10 +46,20 @@ public class StarGenerator : MonoBehaviour
     private float timeCounter = 0;
     private float timeCounterPk = 0;
 
-    // Use this for initialization
-    void Start()
-    {
+    private bool _isStart = false;
 
+    // Use this for initialization
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Initialize();
+    }
+
+    /// <summary>
+    /// Initialize this instance.
+    /// </summary>
+    public void Initialize()
+    {
         //Fieldオブジェクトの取り込み
         GameObject field = GameObject.Find("Field") as GameObject;
         //Fieldの端の位置を計算
@@ -58,11 +68,16 @@ public class StarGenerator : MonoBehaviour
         maxPosX = fieldPosition.x + terrainLength;  //右上のx座標
         minPosZ = fieldPosition.z;  // 左下のz座標
         maxPosZ = fieldPosition.z + terrainLength;  //右上のz座標
+        _isStart = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_isStart == false)
+        {
+            return;
+        }
         //秒数をカウント
         timeCounter += Time.deltaTime;
         //一定秒数を超えたらtrueになる
@@ -93,9 +108,9 @@ public class StarGenerator : MonoBehaviour
         if (timeCounterPk > timeInterval_Pk)
         {
             timeCounterPk = 0;
-            
+
             // 生成するPumpkin_02Prefab数をランダムに決める
-            int p = Random.Range(1, maxPkNum + 1);
+            int p = Random.Range(0, maxPkNum + 1);
             // 生成
             for (int m = 0; m < p; m++)
             {

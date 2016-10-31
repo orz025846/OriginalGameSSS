@@ -24,6 +24,10 @@ public class CameraRotetion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            lastPosition = Input.mousePosition;
+        }
         if (Input.GetMouseButton(0))
         {
             // カーソルの位置座標
@@ -46,6 +50,10 @@ public class CameraRotetion : MonoBehaviour
             }
 
             lastPosition = mPos;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            lastPosition = Vector3.zero;
         }
     }
 }
