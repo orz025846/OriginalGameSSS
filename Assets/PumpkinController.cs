@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PumpkinController : MonoBehaviour {
     private Rigidbody pkRigidbody;
-    private float upforce = 100.0f;
+    private float upforce = 500.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,7 @@ public class PumpkinController : MonoBehaviour {
             // 上方向に加速
             this.pkRigidbody.AddForce(this.transform.forward * up);
         }
+        return;
 
     }
 
