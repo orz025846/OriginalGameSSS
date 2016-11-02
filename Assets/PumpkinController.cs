@@ -26,6 +26,10 @@ public class PumpkinController : MonoBehaviour {
         {
             // 上方向に加速
             this.pkRigidbody.AddForce(this.transform.forward * up);
+            if(this.gameObject.transform.position.y > 8000)
+            {
+                Destroy(this.gameObject);
+            }
         }
         return;
 
