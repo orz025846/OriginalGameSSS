@@ -231,6 +231,10 @@ Prefab:
       propertyPath: m_Name
       value: Fence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 190658, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
   m_IsPrefabParent: 0
@@ -425,6 +429,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 50.00003
       objectReference: {fileID: 0}
+    - target: {fileID: 179364, guid: 1bc636ff02c622f439cf73b4f0aa9cd7, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bc636ff02c622f439cf73b4f0aa9cd7, type: 2}
   m_IsPrefabParent: 0
@@ -490,6 +498,10 @@ Prefab:
     - target: {fileID: 190658, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
       propertyPath: m_Name
       value: Fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 190658, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
@@ -622,6 +634,10 @@ Prefab:
     - target: {fileID: 179364, guid: 1bc636ff02c622f439cf73b4f0aa9cd7, type: 2}
       propertyPath: m_Name
       value: Pumpkin_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 179364, guid: 1bc636ff02c622f439cf73b4f0aa9cd7, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bc636ff02c622f439cf73b4f0aa9cd7, type: 2}
@@ -776,6 +792,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 190658, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb44ef16b180b6941bbe4caf411f6249, type: 2}
   m_IsPrefabParent: 0
@@ -926,6 +946,10 @@ Prefab:
     - target: {fileID: 436018, guid: 6691b02975f55b1479597e6ac2f07bcc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 106.298
+      objectReference: {fileID: 0}
+    - target: {fileID: 133218, guid: 6691b02975f55b1479597e6ac2f07bcc, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6691b02975f55b1479597e6ac2f07bcc, type: 2}
@@ -1205,6 +1229,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -75.125
       objectReference: {fileID: 0}
+    - target: {fileID: 170538, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
   m_IsPrefabParent: 0
@@ -1387,6 +1415,10 @@ Prefab:
       propertyPath: m_Name
       value: Lamp_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 170538, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
   m_IsPrefabParent: 0
@@ -1440,6 +1472,10 @@ Prefab:
     - target: {fileID: 467122, guid: 514630a4715471e4180ce9a0a6c5c236, type: 2}
       propertyPath: m_LocalScale.z
       value: 49.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 194752, guid: 514630a4715471e4180ce9a0a6c5c236, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 514630a4715471e4180ce9a0a6c5c236, type: 2}
@@ -1957,6 +1993,10 @@ Prefab:
     - target: {fileID: 170538, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
       propertyPath: m_Name
       value: Lamp_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 170538, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7c4a1eaebbfe2647a4f25b1adde5211, type: 2}

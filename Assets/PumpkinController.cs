@@ -24,6 +24,7 @@ public class PumpkinController : MonoBehaviour {
 
         if (this.gameObject.tag == "PumpkinBombTag")
         {
+            this.transform.Rotate(0, 0, 0);
             // 上方向に加速
             this.pkRigidbody.AddForce(this.transform.forward * up);
             if(this.gameObject.transform.position.y > 10000)

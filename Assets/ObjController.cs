@@ -32,8 +32,14 @@ public class ObjController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                image.fillAmount += 0.3f;
-                Destroy(hit.collider.gameObject, 0.1f);
+                //if(tag == "Untagged")
+                //{
+                    //return;
+                //}else
+                //{
+                    image.fillAmount += 0.3f;
+                    Destroy(hit.collider.gameObject, 0.1f);
+                //}
 
             }
 
