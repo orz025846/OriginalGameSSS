@@ -7,15 +7,18 @@ public class ObjController : MonoBehaviour
 {
     // ポイント加算用UIのアタッチ
     [SerializeField]
-    public Image image;
+    public PBar pBar;
     // ゲームクリア表示用テキスト
     public GameObject clearText;
+
+
+
 
     // Use this for initialization
     void Start()
     {
         // バーの初期化
-        this.image.fillAmount = 0;
+        this.pBar.Initialize();
         // クリア表示用テキストの取得（TimeUPTextレンタル）
         this.clearText = GameObject.Find("TimeUPText");
     }
@@ -24,27 +27,21 @@ public class ObjController : MonoBehaviour
     void Update()
     {
         // Raycastの実装
-        if (Input.GetMouseButtonDown(0))  // マウス左クリック
-        {
+        if (Input.GetMouseButtonDown(0))
+        {  // マウス左クリック
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);  //Ray発射
             RaycastHit hit;  //Rayが当たったオブジェクト情報取得用
             float maxDistance = 2000;  //Ray軌跡の長さ
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                //if(tag == "Untagged")
-                //{
-                    //return;
-                //}else
-                //{
-                    image.fillAmount += 0.3f;
-                    Destroy(hit.collider.gameObject, 0.1f);
-                //}
+                pBar.AddValue(0.1f);
+                Destroy(hit.collider.gameObject, 0.1f);
 
             }
 
-            if (image.fillAmount >= 1)  //バーが満杯
-            {
+            if (pBar.FillAmount >= 1)
+            {  //バーが満杯
                 this.clearText.GetComponent<Text>().text = "Full Charge!!";
                 StartCoroutine(SegueGameClearScene()); //クリア画面に遷移
             }
@@ -61,5 +58,5 @@ public class ObjController : MonoBehaviour
         SceneManager.LoadScene("Clear");
     }
 
-        
+
 }
