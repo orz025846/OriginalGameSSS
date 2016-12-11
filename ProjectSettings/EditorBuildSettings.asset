@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameScene.unity
+    path: Assets/App/Scenes/GameScene.unity
   - enabled: 1
-    path: Assets/Start.unity
+    path: Assets/App/Scenes/Start.unity
   - enabled: 1
-    path: Assets/Over.unity
+    path: Assets/App/Scenes/Clear.unity
   - enabled: 1
-    path: Assets/Clear.unity
+    path: Assets/App/Scenes/Over.unity

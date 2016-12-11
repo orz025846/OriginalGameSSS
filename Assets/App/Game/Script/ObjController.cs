@@ -34,7 +34,7 @@ public class ObjController : MonoBehaviour
 
 			if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
 				pBar.AddValue (0.1f);
-				Destroy (hit.collider.gameObject, 0.1f);
+                Destroy (hit.collider.gameObject, 0.1f);
 
 			}
 
