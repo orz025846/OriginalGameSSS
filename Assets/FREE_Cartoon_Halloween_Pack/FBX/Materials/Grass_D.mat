@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Halloween_Props
+  m_Name: Grass_D
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 0
+  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d64cb2b1d2e5754479bc11c35d496e21, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -40,21 +40,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _EmissionMap
+        name: _DetailTex
       second:
-        m_Texture: {fileID: 2800000, guid: 28b589325ec23ff4f8e2dfc8cc41d4ea, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _Illum
+        name: _EmissionMap
       second:
-        m_Texture: {fileID: 2800000, guid: 9171932c5ce7f9649843faf380c6f8f2, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: ca8a686643a6d5148a443feee130cd9d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b3c9d8cdbd389842aa1fbc9590fb8b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -80,6 +80,9 @@ Material:
         name: _BumpScale
       second: 1
     - first:
+        name: _Cull
+      second: 2
+    - first:
         name: _Cutoff
       second: 0.5
     - first:
@@ -89,17 +92,14 @@ Material:
         name: _DstBlend
       second: 0
     - first:
-        name: _EmissionLM
-      second: 0
-    - first:
         name: _EmissionScaleUI
-      second: 1
+      second: 0
     - first:
         name: _GlossMapScale
       second: 1
     - first:
         name: _Glossiness
-      second: 0.09
+      second: 0.403
     - first:
         name: _GlossyReflections
       second: 1
@@ -128,15 +128,21 @@ Material:
         name: _UVSec
       second: 0
     - first:
+        name: _WindQuality
+      second: 0
+    - first:
         name: _ZWrite
       second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.08088237, g: 0.045793694, b: 0.045793694, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.25735295, g: 0.25167605, b: 0.25167605, a: 0}
     - first:
         name: _EmissionColorUI
       second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _HueVariation
+      second: {r: 1, g: 0.5, b: 0, a: 0.1}

@@ -4,6 +4,9 @@ using UnityEngine.EventSystems;
 
 public class StarController : MonoBehaviour {
 
+    [SerializeField]
+    private ParticleSystem _onTappedParticle;
+
     // オブジェクトの移動速度
     public float[] speed = { -50.0f, -50.0f };  //ランダム変数
     public float[] speedSs;  //移動速度用
@@ -38,16 +41,26 @@ public class StarController : MonoBehaviour {
 
 
     }
-
+    /// <summary>
+    /// Raises the tapped event.
+    /// </summary>
+    public void OnTapped()
+    {
+        //パーティクル再生
+        _onTappedParticle.Play();
+        //描画しない
+        GetComponent<MeshRenderer>().enabled = false;
+        //１秒後に削除
+        Destroy(gameObject, 1.0f);
+    }
 
     void OnTriggerEnter(Collider other)
     {
         //Field以外に衝突した場合
-        if (other.gameObject.tag == "SmallStarTag" || other.gameObject.tag == "PumpkinTag")
+        if (other.gameObject.tag == "SmallPumpkinTag" || other.gameObject.tag == "PumpkinTag")
         {
             return;
         }
-        GetComponent<ParticleSystem>().Play();
     }
 
 }

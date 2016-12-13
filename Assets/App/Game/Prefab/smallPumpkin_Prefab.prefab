@@ -23,12 +23,12 @@ GameObject:
   - 135: {fileID: 135000012323806472}
   - 23: {fileID: 23000014096295556}
   - 54: {fileID: 54000011342257326}
-  - 199: {fileID: 199000012631324088}
   - 114: {fileID: 114000011288406228}
-  - 198: {fileID: 198000010082274912}
+  - 198: {fileID: 198000012874373202}
+  - 199: {fileID: 199000011136349394}
   m_Layer: 8
-  m_Name: smallStarPrefab
-  m_TagString: SmallStarTag
+  m_Name: smallPumpkin_Prefab
+  m_TagString: SmallPumpkinTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900ba272f2c72114aa2945ab2476691d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onTappedParticle: {fileID: 198000012874373202}
   speed:
   - -50
   - -50
@@ -125,7 +126,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
---- !u!198 &198000010082274912
+--- !u!198 &198000012874373202
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -173,7 +174,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 0
-  moveWithTransform: 0
+  moveWithTransform: 1
   scalingMode: 1
   InitialModule:
     serializedVersion: 2
@@ -1878,7 +1879,7 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &199000012631324088
+--- !u!199 &199000011136349394
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

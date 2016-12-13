@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SmallStarTag
+  - SmallPumpkinTag
   - PumpkinTag
   - PumpkinKingTag
   layers:
@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - SmallStarLayer
+  - SmallPumpkinLayer
   - PumpkinLayer
   - 
   - 
