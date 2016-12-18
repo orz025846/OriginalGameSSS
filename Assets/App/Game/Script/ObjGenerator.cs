@@ -5,10 +5,10 @@ using System.Collections.Generic;
 public class ObjGenerator : MonoBehaviour
 {
     // 生成オブジェクトのPrefab
-    public GameObject smallStarPrefab;
+    public GameObject smallPumpkinPrefab;
     public GameObject Pumpkin_02Prefab;
     /// <summary>
-    /// smallStarの生成位置
+    /// SmallPumpkinの生成位置
     /// </summary>
     [SerializeField]
     private float gensSPosY = 500;
@@ -16,7 +16,7 @@ public class ObjGenerator : MonoBehaviour
     private float genPkPosY = 900;
 
     /// <summary>
-    /// smallStarの生成個数の上限
+    /// SmallPumpkinの生成個数の上限
     /// </summary>
     private int maxsSNum = 8;
     private int maxPkNum = 1;
@@ -86,15 +86,15 @@ public class ObjGenerator : MonoBehaviour
             //秒数カウンターを0で初期化
             timeCounter = 0;
 
-            // 生成するsmallStarPrefab数をランダムに決める
+            // 生成するSmallPumpkinPrefab数をランダムに決める
             int n = Random.Range(1, maxsSNum + 1);
             // 生成
             for (int i = 0; i < n; i++)
             {
                 //星の生成
-                GameObject smallStar = Instantiate(smallStarPrefab) as GameObject;
+                GameObject SmallPumpkin = Instantiate(smallPumpkinPrefab) as GameObject;
                 //位置を指定
-                smallStar.transform.position =
+                SmallPumpkin.transform.position =
                     new Vector3(
                     Random.Range(minPosX, maxPosX),
                     gensSPosY,
