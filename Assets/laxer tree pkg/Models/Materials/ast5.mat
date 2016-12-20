@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - first:
         name: _AO
-      second: 0.94
+      second: 4
     - first:
         name: _BaseLight
       second: 0.098
