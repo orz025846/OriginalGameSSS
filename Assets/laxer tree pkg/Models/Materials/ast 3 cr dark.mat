@@ -73,7 +73,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.74264705, g: 0.32010648, b: 0.0896298, a: 1}
+      second: {r: 0.64482754, g: 0.27794287, b: 0.07782396, a: 1}
     - first:
         name: _Emission
       second: {r: 0, g: 0, b: 0, a: 0}
@@ -85,7 +85,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 0}
     - first:
         name: _TranslucencyColor
-      second: {r: 0.45808825, g: 0.6197664, b: 0.6544118, a: 1}
+      second: {r: 0.332571, g: 0.449949, b: 0.47510144, a: 1}
     - first:
         name: _TreeInstanceColor
       second: {r: 1, g: 1, b: 1, a: 1}
