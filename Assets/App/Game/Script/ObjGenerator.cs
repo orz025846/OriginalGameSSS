@@ -18,7 +18,7 @@ public class ObjGenerator : MonoBehaviour
     /// <summary>
     /// SmallPumpkinの生成個数の上限
     /// </summary>
-    private int maxsSNum = 8;
+    private int maxsSNum = 7;
     private int maxPkNum = 1;
     /// <summary>
     /// Terrainの位置を格納する変数 

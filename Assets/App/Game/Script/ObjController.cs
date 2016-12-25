@@ -35,7 +35,7 @@ public class ObjController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                pBar.AddValue(0.1f);
+                pBar.AddValue(0.05f);  // FillAmount増加量
                 //レイキャストに当たったオブジェクトからStartControllerのインスタンスを取得
                 StarController pumpkin = hit.collider.gameObject.GetComponent<StarController>();
                 if (pumpkin != null)

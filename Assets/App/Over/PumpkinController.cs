@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using System.Collections;
 
 public class PumpkinController : MonoBehaviour {
@@ -12,11 +13,14 @@ public class PumpkinController : MonoBehaviour {
         this.transform.Rotate(0, 0, 0);
 
         this.pkRigidbody = GetComponent<Rigidbody>();
-        
+
+        //transform.DOBlendableRotateBy(new Vector3(-270, 0, 0), 1.0f).SetLoops(-1);
+
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         //回転
         this.transform.Rotate(0, 0, 1);
         float up = 0;
