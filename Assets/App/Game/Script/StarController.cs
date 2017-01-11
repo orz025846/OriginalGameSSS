@@ -51,7 +51,8 @@ public class StarController : MonoBehaviour {
         //描画しない
         GetComponent<MeshRenderer>().enabled = false;
         //１秒後に削除
-        Destroy(gameObject, 1.0f);
+        //Destroy(gameObject, 1.0f);
+        gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
