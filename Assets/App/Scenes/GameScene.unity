@@ -1529,10 +1529,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1190319104}
-  - 114: {fileID: 1190319105}
   - 114: {fileID: 1190319106}
   - 114: {fileID: 1190319107}
-  - 114: {fileID: 1190319109}
   - 114: {fileID: 1190319108}
   m_Layer: 0
   m_Name: GameObject
@@ -1554,23 +1552,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!114 &1190319105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190319103}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3793e3264247b45ad710e49117ff5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallPumpkinPrefab: {fileID: 1000013929893118, guid: 6664e4214823ef4479ca27da9a84d5c9,
-    type: 2}
-  Pumpkin_02Prefab: {fileID: 1000010419465352, guid: 6063790a4802f0d49a3f194222ccc313,
-    type: 2}
-  gensSPosY: 500
-  genPkPosY: 200
 --- !u!114 &1190319106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,21 +1592,6 @@ MonoBehaviour:
     type: 2}
   Pumpkin_02Prefab: {fileID: 1000010419465352, guid: 6063790a4802f0d49a3f194222ccc313,
     type: 2}
-  gensSPosY: 500
-  genPkPosY: 900
---- !u!114 &1190319109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190319103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3074c2fe04da1e544ae53c2a4b27426d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallPumpkinPrefab: {fileID: 0}
-  Pumpkin_02Prefab: {fileID: 0}
   gensSPosY: 500
   genPkPosY: 900
 --- !u!1 &1216933462
